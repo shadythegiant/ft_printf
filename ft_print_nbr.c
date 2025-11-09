@@ -17,6 +17,14 @@ int ft_print_hex(unsigned long n , int uppercase) {
 }
 
 
+int ft_putptr(void *n) { 
+    
+    if (n == NULL)
+        return(ft_putstr("nil")); 
+
+     return(ft_putstr("0x") + ft_print_hex((unsigned int)n, 0));  
+}
+
 
 int ft_putunbr(unsigned int n) {
 
