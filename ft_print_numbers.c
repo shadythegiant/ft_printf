@@ -13,27 +13,27 @@
 
 int	ft_print_hex(unsigned long n, int uppercase)
 {
-	char buffer[20]; 
-	char *hex; 
-	int  count; 
-	int  i; 
+	char	buffer[20];
+	char	*hex;
+	int		count;
+	int		i;
 
-	if(uppercase)
+	if (uppercase)
 		hex = "0123456789ABCDEF";
-	else 
-		hex = "0123456789abcdef"; 
-	if(n == 0)
-		return(ft_putchar('0')); 
-	i = 0; 
-	while(n > 0) 
-	{ 
-		buffer[i++] = hex[n % 16]; 
-		n = n / 16; 
-	}			 
-	count = 0; 
-	while(i > 0)
+	else
+		hex = "0123456789abcdef";
+	if (n == 0)
+		return (ft_putchar('0'));
+	i = 0;
+	while (n > 0)
+	{
+		buffer[i++] = hex[n % 16];
+		n = n / 16;
+	}
+	count = 0;
+	while (i > 0)
 		count += ft_putchar(buffer[--i]);
-	    return (count); 	
+	return (count);
 }
 
 int	ft_putptr(void *n)
@@ -53,8 +53,8 @@ int	ft_putunbr(unsigned int n)
 
 int	ft_putnbr(int n)
 {
-	long nbr;
-	int count;
+	long	nbr;
+	int		count;
 
 	nbr = n;
 	count = 0;
@@ -65,9 +65,9 @@ int	ft_putnbr(int n)
 	}
 	if (nbr > 9)
 	{
-		 count += ft_putnbr(nbr / 10);
-		 count += ft_putchar((nbr % 10) + '0'); 
-		return (count); 
+		count += ft_putnbr(nbr / 10);
+		count += ft_putchar((nbr % 10) + '0');
+		return (count);
 	}
 	else
 		return (count + ft_putchar(nbr + '0'));

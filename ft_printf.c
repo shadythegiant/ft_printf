@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
 
 static int	ft_print_format(va_list ap, char **format_str, char specifier)

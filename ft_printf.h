@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <unistd.h>
-#include <stdarg.h>
+# include <stdarg.h>
+# include <unistd.h>
 
-int		ft_strlen(const char *s); 
-int 	ft_printf(const char *format, ...); 
+int		ft_strlen(const char *s);
+int		ft_printf(const char *format, ...);
 char	*ft_strchr(const char *s, int c);
 int		ft_putchar(char c);
 int		ft_putstr(const char *s);

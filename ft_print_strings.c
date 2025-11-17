@@ -38,7 +38,7 @@ int	ft_putchar(char c)
 
 int	ft_putstr(const char *s)
 {
-	int i;
+	int	i;
 
 	if (!s)
 		s = "(null)";
